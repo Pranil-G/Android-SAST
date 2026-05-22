@@ -1,9 +1,5 @@
 # Context-Aware Android SAST Engine
 
-Python implementation of the design in `DESIGN.md`.
-
-Detailed internal documentation is available in [PROJECT_WORKING.md](</C:/Users/Pranil/Documents/SEM 4/EDI/New folder/PROJECT_WORKING.md>).
-
 ## What It Does
 
 - Loads and fingerprints APK files.
@@ -64,7 +60,7 @@ When a dashboard upload starts, the server now prints:
 [dashboard] completed scan: <apk>
 ```
 
-The dashboard evidence path no longer decompiles the whole APK source tree by default. It extracts only the classes that appear in findings, which makes the web flow materially faster while still returning near-code evidence.
+Jadx is required for --show-near-code flag
 
 ## Notes
 
