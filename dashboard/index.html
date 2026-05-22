@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Context SAST</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div class="brand">Context SAST</div>
+        <button id="upload-trigger" class="upload-button" type="button">Upload APK</button>
+        <input id="apk-upload" type="file" accept=".apk,application/vnd.android.package-archive">
+      </section>
+
+      <section class="statusbar">
+        <span id="scan-status" class="scan-status">Waiting for APK upload</span>
+      </section>
+
+      <section id="result-shell" class="result-shell hidden">
+        <section class="result-header">
+          <div>
+            <h1 id="package-name" class="package-name">-</h1>
+            <p id="package-meta" class="package-meta">-</p>
+          </div>
+          <div id="finding-total-badge" class="finding-total-badge">0 findings</div>
+        </section>
+
+        <section id="findings-list" class="findings-list"></section>
+      </section>
+
+      <section id="empty-state" class="empty-state">
+        <div class="empty-card">
+          <span>Upload an APK to scan</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
